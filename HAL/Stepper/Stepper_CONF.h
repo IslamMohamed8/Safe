@@ -36,4 +36,8 @@
 #define COUNTER_CLOCKWISE 		1
 
 
+
+#define N                   7.5   //steps angle
+#define period              100
+
 #endif /* STEPPER_CONF_H_ */
