@@ -1,0 +1,19 @@
+#include "HAL/Keypad/Keypad.h"
+#include "HAL/LCD/LCD.h"
+#include "util/delay.h"
+
+void main(void)
+{
+	UINT8 DATA ;
+    Keypad_Init();
+    LCD_Init();
+    LCD_WriteSentence("    WELLCOME!");
+    _delay_ms(1000);
+    LCD_Clear();
+	 while (1)
+		  {
+	    	 DATA = Keypad_GetKey();
+	    	 if(DATA!='\0')
+		     LCD_WriteData(DATA);
+		  }
+}
